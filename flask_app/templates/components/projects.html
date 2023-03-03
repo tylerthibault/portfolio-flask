@@ -1,0 +1,9 @@
+<div class="flex justify-center mb-7">
+    <h2 class="text-4xl font-bold dark:text-light_1 uppercase">Projects</h2>
+</div>
+<div class="flex flex-col">
+{% include 'components/projects/project_okandogs.html' %}
+{% include 'components/projects/project_baked_blessings.html' %}
+</div>
+
+<script src="{{ url_for('static', filename='js/projects.js') }}"></script>

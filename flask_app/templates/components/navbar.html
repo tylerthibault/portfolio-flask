@@ -1,0 +1,21 @@
+<div class="hidden md:block sticky top-0 px-5 rounded-2xl m-3 border-b-4 dark:border-blue_1 border-dark_1 bg-blue_2 dark:bg-dark_2 z-20 duration-300"  id="navbar">
+<!-- <div class="hidden md:block sticky top-0 border-b-4 dark:border-blue_1 border-dark_1 bg-blue_2 dark:bg-dark_2 z-20"> -->
+    <nav class="flex items-center justify-between px-5 h-20">
+        <ul>
+            <li class="dark:text-yellow_1">A Tbo Company</li>
+        </ul>
+        <div class="flex gap-7 dark:text-black">
+            <ul class="bg-yellow_1 rounded-full px-3">
+                <li>
+                    <a class="hover:text-white text-2xl p-0 m-0" href=""><i class="fa-brands fa-github"></i></a>
+                </li>
+            </ul>
+            {% include 'components/nav_items.html' %}
+            <div class="text-2xl">
+                <p class="dark-mode-btn cursor-pointer"><i class="fa-solid fa-moon"></i></p>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>

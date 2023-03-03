@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="dark:text-light_1 duration-500 transition-colors relative">
+    <div class="z-10">
+        {% include 'components/about_me.html' %}
+    </div>
+    <img class="hidden dark:block absolute top-0 left-0 -z-10 object-cover object-bottom w-full" src="{{ url_for('static', filename='img/city.png') }}" alt="">
+</div>
+<div class="bg-yellow_1 dark:bg-blue_1 w-full py-7 duration-500 transition-colors">
+    {% include 'components/technologies.html' %}
+</div>
+<div class="py-7">
+    {% include 'components/projects.html' %}
+</div>
+{% endblock content %}

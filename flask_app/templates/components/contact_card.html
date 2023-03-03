@@ -1,0 +1,30 @@
+<div class="bg-blue_1 dark:bg-blue_2 border-b-4 border-dark_1 dark:border-blue_1 rounded-2xl p-7">
+    <div class=" w-full flex flex-col shadow rounded-lg bg-light_1 dark:bg-blue_1 p-1 border-2 border-black ">
+        <div class="h-[20em] w-full bg-blue_2 dark:bg-yellow_1 rounded-lg duration-500 transition-colors" id="profile-pic">
+            <img class="hidden dark:block rounded-lg h-full w-full object-fit object-bottom" src="{{ url_for('static', filename='img/super.png') }}" alt="profile pic" loading="eager">
+            <img class="dark:hidden rounded-lg h-full w-full object-fit object-bottom " src="{{ url_for('static', filename='img/normal.png') }}" alt="profile pic" loading="eager">
+        </div>
+        <p class="dark:hidden font-bold text-md uppercase underline text-center text-black">Tyler Thibault</p>
+        <p class="hidden dark:block font-bold text-md uppercase underline text-center text-black">Code Crusader</p>
+        <div class="flex flex-col lg:grid grid-cols-12 gap-7 justify-evenly text-center mt-5 text-center px-2 dark:text-dark_1">
+            <div class="flex flex-col flex-wrap md:col-span-6">
+                <p class="font-bold text-md uppercase p-1 bg-blue_2 text-light_1 rounded-lg">Contact Info</p>
+                <a href="mailto:tyler.thibault@pm.com" class="text-sm">tyler.thibault@pm.com</a>
+                <a class="text-sm" href="cell:">123-456-7894</a>
+            </div>
+            <div class="md:col-span-6">
+                <p class="font-bold text-md uppercase p-1 bg-blue_2 text-light_1 rounded-lg">Current Job</p>
+                <div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-xs text-center font-bold underline">Work Place</p>
+                        <p class="text-sm">Coding Dojo</p>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-xs text-center font-bold underline">Job Title</p>
+                        <p class="text-sm">Software Developer Instructor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

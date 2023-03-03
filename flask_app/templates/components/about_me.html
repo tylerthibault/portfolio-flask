@@ -1,0 +1,14 @@
+<div class="flex flex-col md:grid grid-cols-12 gap-7 p-7 w-full ">
+    <div class="col-span-7 md:col-span-6 xl:col-span-4">
+        {% include 'components/contact_card.html' %}
+    </div>
+    <div class="flex flex-col col-span-6 xl:col-span-8 justify-center items-center gap-3 mt-auto h-full">
+        <div class="bg-blue_1 dark:bg-blue_2 duration-500 transition-colors w-full border-b-4 border-dark_1 dark:border-blue_1 rounded-2xl p-7 mt-0">
+            <h2 class="text-xl font-bold uppercase">About Me</h2>
+            <p class="text-black">My name is Tyler Thibault, and I have a wife and two kids. I served in the Navy for 5 years and after serving in the Navy, I moved to Indonesia, where I had actually lived as a child. During my time there, I became a school teacher, which ignited a passion for education that has stayed with me ever since. When I moved back to the US, I transitioned into software development and quickly found that my passion for teaching could be applied to this field as well. I now work as a teacher of programmers, helping the next generation of developers to grow and thrive in their careers.</p>
+        </div>
+        <div class="mt-auto mb-0">
+            {% include 'components/languages.html' %}
+        </div>
+    </div>
+</div>

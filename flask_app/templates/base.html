@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% include 'tailwindcss/components.html' %}
+    {% include 'tailwindcss/config.html' %}
+
+    {% block title %}
+    <title>My Portfolio</title>
+    {% endblock title %}
+
+    {% block css %}
+    
+    {% endblock css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+</head>
+<body class="bg-light_1 dark:bg-dark_1 duration-500 transition-colors">
+    {% block navbar %}
+        {% include 'components/navbar.html' %}
+    {% endblock navbar %}
+
+    <div class="">
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+
+    <div>
+        {% include 'components/footer.html' %}
+    </div>
+
+    {% block js %}
+        
+    {% endblock js %}
+    <script src="https://kit.fontawesome.com/4963ddc73f.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dark_mode.js') }}"></script>
+    
+</body>
+</html>
