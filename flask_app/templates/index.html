@@ -8,9 +8,17 @@
     </div>
     <img class="hidden dark:block absolute top-0 left-0 -z-10 object-cover object-bottom w-full" src="{{ url_for('static', filename='img/city.png') }}" alt="">
 </div>
-<div class="bg-yellow_1 dark:bg-blue_1 w-full py-7 duration-500 transition-colors">
-    {% include 'components/technologies.html' %}
-</div>
+<div class="bg-yellow_1 dark:bg-blue_1 w-full py-7 duration-500 transition-colors relative overflow-hidden">
+    <div class="relative z-10 pointer-event-none">
+      {% include 'components/technologies.html' %}
+    </div>
+    <div class="absolute top-0 w-full flex flex-wrap justify-center h-full overflow-visible z-1">
+      {% for idx in range(100) %}
+        <div class="hex"></div>
+      {% endfor %}
+    </div>
+  </div>
+
 <div class="py-7">
     {% include 'components/projects.html' %}
 </div>

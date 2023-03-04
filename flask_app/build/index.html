@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+    @layer utilities {
+      /* buttons */
+      button, .btn {
+        @apply shadow rounded-full px-5
+      }
+      .hex {
+        @apply hover:transform  duration-300 bg-yellow_1 hover:bg-blue_2
+      }
+    }
+  </style>
+    <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            light_1: '#ffffff',
+            light_2: '#CCCCCC',
+            dark_1: '#19222A',
+            dark_2: '#131A24',
+            mid_dark_1: '#121B23',
+            mid_dark_2: '#2A343E',
+            yellow_1: '#D7BA05',
+            blue_1: '#1BA4D5',
+            blue_2: '#126F91',
+          }
+        }
+      }
+    }
+  </script>
+
+    
+    <title>My Portfolio</title>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="/static/css/global.css">
+</head>
+<body class="bg-light_1 dark:bg-dark_1 duration-500 transition-colors">
+    
+        <div class="hidden md:block sticky top-0 px-5 rounded-2xl m-3 border-b-4 dark:border-blue_1 border-dark_1 bg-blue_2 dark:bg-dark_2 z-20 duration-300"  id="navbar">
+<!-- <div class="hidden md:block sticky top-0 border-b-4 dark:border-blue_1 border-dark_1 bg-blue_2 dark:bg-dark_2 z-20"> -->
+    <nav class="flex items-center justify-between px-5 h-20">
+        <ul>
+            <li class="dark:text-yellow_1">A Tbo Company</li>
+        </ul>
+        <div class="flex gap-7 dark:text-black">
+            <ul class="bg-yellow_1 rounded-full px-3">
+                <li>
+                    <a class="hover:text-white text-2xl p-0 m-0" href=""><i class="fa-brands fa-github"></i></a>
+                </li>
+            </ul>
+            <ul class="bg-yellow_1 rounded-full flex gap-3 px-3 py-1 text-2xl">
+    <li><a class="hover:text-white" href="#"><i class="fa-sharp fa-solid fa-person" aria-hidden="true"></i><span class="sr-only">About Me</span></a></li>
+    <li><a class="hover:text-white" href="#"><i class="fa-solid fa-laptop" aria-hidden="true"></i><span class="sr-only">technologies</span></a></li>
+    <li><a class="hover:text-white" href="#"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span class="sr-only">Work</span></a></li>
+    <li><a class="hover:text-white" href="#"><i class="fa-solid fa-school" aria-hidden="true"></i><span class="sr-only">Education</span></a></li>
+</ul>
+            <div class="text-2xl">
+                <p class="dark-mode-btn cursor-pointer"><i class="fa-solid fa-moon"></i></p>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script src="/static/js/navbar.js"></script>
+    
+
+    <div class="">
+        
+<div class="dark:text-light_1 duration-500 transition-colors relative">
+    <div class="z-10">
+        <div class="flex flex-col md:grid grid-cols-12 gap-7 p-7 w-full ">
+    <div class="col-span-7 md:col-span-6 xl:col-span-4">
+        <div class="bg-blue_1 dark:bg-blue_2 border-b-4 border-dark_1 dark:border-blue_1 rounded-2xl p-7">
+    <div class=" w-full flex flex-col shadow rounded-lg bg-light_1 dark:bg-blue_1 p-1 border-2 border-black ">
+        <div class="h-[20em] w-full bg-blue_2 dark:bg-yellow_1 rounded-lg duration-500 transition-colors" id="profile-pic">
+            <img class="hidden dark:block rounded-lg h-full w-full object-fit object-bottom" src="/static/img/super.png" alt="profile pic" loading="eager">
+            <img class="dark:hidden rounded-lg h-full w-full object-fit object-bottom " src="/static/img/normal.png" alt="profile pic" loading="eager">
+        </div>
+        <p class="dark:hidden font-bold text-md uppercase underline text-center text-black">Tyler Thibault</p>
+        <p class="hidden dark:block font-bold text-md uppercase underline text-center text-black">Code Crusader</p>
+        <div class="flex flex-col lg:grid grid-cols-12 gap-7 justify-evenly text-center mt-5 text-center px-2 dark:text-dark_1">
+            <div class="flex flex-col flex-wrap md:col-span-6">
+                <p class="font-bold text-md uppercase p-1 bg-blue_2 text-light_1 rounded-lg">Contact Info</p>
+                <a href="mailto:tyler.thibault@pm.com" class="text-sm">tyler.thibault@pm.com</a>
+                <a class="text-sm" href="cell:">123-456-7894</a>
+            </div>
+            <div class="md:col-span-6">
+                <p class="font-bold text-md uppercase p-1 bg-blue_2 text-light_1 rounded-lg">Current Job</p>
+                <div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-xs text-center font-bold underline">Work Place</p>
+                        <p class="text-sm">Coding Dojo</p>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-xs text-center font-bold underline">Job Title</p>
+                        <p class="text-sm">Software Developer Instructor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="flex flex-col col-span-6 xl:col-span-8 justify-center items-center gap-3 mt-auto h-full">
+        <div class="bg-blue_1 dark:bg-blue_2 duration-500 transition-colors w-full border-b-4 border-dark_1 dark:border-blue_1 rounded-2xl p-7 mt-0">
+            <h2 class="text-xl font-bold uppercase">About Me</h2>
+            <p class="text-black">My name is Tyler Thibault, and I have a wife and two kids. I served in the Navy for 5 years and after serving in the Navy, I moved to Indonesia, where I had actually lived as a child. During my time there, I became a school teacher, which ignited a passion for education that has stayed with me ever since. When I moved back to the US, I transitioned into software development and quickly found that my passion for teaching could be applied to this field as well. I now work as a teacher of programmers, helping the next generation of developers to grow and thrive in their careers.</p>
+        </div>
+        <div class="mt-auto mb-0">
+            <div class="bg-blue_1 dark:bg-blue_2 duration-500 transition-colors w-full border-b-4 border-dark_1 dark:border-blue_1 rounded-2xl p-7 m-auto mb-0">
+    <h2 class="text-xl font-bold mb-3 uppercase">Languages I can teach</h2>
+    <div class="grid lg:grid-cols-3 gap-3 text-xs">
+        <div class="bg-light_1 dark:bg-blue_1 rounded-lg border-b-4 border-dark_1 dark:border-yellow_1 p-3">
+            <p class="font-bold text-lg">Python</p>
+            <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugiat non iusto quibusdam molestiae aut neque in fuga laudantium corrupti!</p>
+        </div>
+        <div class="bg-light_1 dark:bg-blue_1 rounded-lg border-b-4 border-dark_1 dark:border-yellow_1 p-3">
+            <p class="font-bold text-lg">JavaScript</p>
+            <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugiat non iusto quibusdam molestiae aut neque in fuga laudantium corrupti!</p>
+        </div>
+        <div class="bg-light_1 dark:bg-blue_1 rounded-lg border-b-4 border-dark_1 dark:border-yellow_1 p-3">
+            <p class="font-bold text-lg">C#</p>
+            <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugiat non iusto quibusdam molestiae aut neque in fuga laudantium corrupti!</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+    </div>
+    <img class="hidden dark:block absolute top-0 left-0 -z-10 object-cover object-bottom w-full" src="/static/img/city.png" alt="">
+</div>
+<div class="bg-yellow_1 dark:bg-blue_1 w-full py-7 duration-500 transition-colors relative overflow-hidden">
+    <div class="relative z-10 pointer-event-none">
+      <div class="z-10">
+    <div class="flex justify-center mb-5">
+        <h2 class="uppercase font-bold text-4xl dark:text-light_1">Technologies</h2>
+    </div>
+    <div class="w-full flex justify-evenly">
+        <div
+            class="p-3 rounded-lg bg-light_1 dark:bg-blue_2 border-b-4 border-dark_1 dark:border-yellow_1 dark:text-light_1">
+            <h3 class="font-bold underline text-xl text-center dark:text-yellow_1">Databases</h3>
+            <div>
+                <ul>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>Firebase</li>
+                    <li>Sqlite</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="p-3 rounded-lg bg-light_1 dark:bg-blue_2 border-b-4 border-dark_1 dark:border-yellow_1 dark:text-light_1">
+            <h3 class="font-bold underline text-xl text-center dark:text-yellow_1">Languages</h3>
+            <div>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>HTML 5</li>
+                    <li>CSS</li>
+                    <li>C#</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="p-3 rounded-lg bg-light_1 dark:bg-blue_2 border-b-4 border-dark_1 dark:border-yellow_1 dark:text-light_1">
+            <h3 class="font-bold underline text-xl text-center dark:text-yellow_1">Frameworks</h3>
+            <div class="flex gap-7">
+                <ul>
+                    <li>Express</li>
+                    <li>Flask</li>
+                    <li>Jinja2</li>
+                    <li>Jquery</li>
+                    <li>Entity</li>
+                    <li>ASP.NET</li>
+                </ul>
+                <ul>
+                    <li>Sequelize</li>
+                    <li>Bootstrap</li>
+                    <li>Taiolwindcss</li>
+                    <li>Materializecss</li>
+                    <li>Skeletoncss</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="p-3 rounded-lg bg-light_1 dark:bg-blue_2 border-b-4 border-dark_1 dark:border-yellow_1 dark:text-light_1">
+            <h3 class="font-bold underline text-xl text-center dark:text-yellow_1">Tools</h3>
+            <div>
+                <ul>
+                    <li>AJAX</li>
+                    <li>MySQL Workbench</li>
+                    <li>Postman</li>
+                    <li>VS Code</li>
+                    <li>AWS</li>
+                    <li>Github</li>
+                    <li>Prisma</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="absolute top-0 w-full flex flex-wrap justify-center h-full overflow-visible z-1">
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+        <div class="hex"></div>
+      
+    </div>
+  </div>
+
+<div class="py-7">
+    <div class="flex justify-center mb-7">
+    <h2 class="text-4xl font-bold dark:text-light_1 uppercase">Projects</h2>
+</div>
+<div class="flex flex-col">
+<div class="md:col-span-4 bg-blue_1 dark:blue_2 dark:text-light_1 rounded-lg m-7 p-3">
+    <div class="flex items-center justify-between">
+        <h2 class="text-2xl">Okandogs</h2>
+        <p class="view-site-btn cursor-pointer btn text-black bg-yellow_1" site-name="okandogs_site">View Site</p>
+    </div>
+    <div class="flex flex-col gap-3 text-black">
+        <p>
+            As a night job, I work a couple of times a week at a local business called Okandogs . While there, I
+            noticed that their website was outdated and lacked the modern features that could help improve their
+            online presence. I
+            thought that building them a mock website would be a great way to showcase my skills and potentially
+            help their business. So, in my free time, I created a website for them with all the latest features and
+            design elements. However, after presenting it to the business owners, they decided not to use it, which
+            was disappointing. Nonetheless, I am proud of the effort and time that I put into the project, and it
+            was a great opportunity to practice my web development skills.
+        </p>
+        <p>
+            Okandogs, a non-profit organization located in Cashmere, Washington, was established by Jan and Tom
+            Short in 2014. Their mission is to provide medical care, spay/neuter services, and adoptions for dogs in
+            need across the state, with a commitment to achieving a 100% adoption rate and zero euthanasia/fatality
+            rate. The shelter has taken in and rescued hundreds of dogs, earning a positive reputation within the
+            local community. Last year, Okandogs took in 801 dogs. One of the organization's success stories is
+            Tucker, a four-year-old Labrador-Retriever mix who was surrendered by his owner earlier this year.
+            Okandogs provided him with medical care, and just a few months later, Tucker was adopted by Major League
+            Baseball's Seattle Mariners franchise as its clubhouse pet, a heartwarming example of Okandogs'
+            dedication to giving dogs a second chance at life and finding them loving forever homes.
+        </p>
+    </div>
+</div>
+<div class="hidden flex flex-col items-center justify-center col-span-7" id="okandogs_site">
+    <div class="flex justify-center gap-3 h-full w-full my-3">
+        <div class="p-3 hover:bg-blue_2 duration-300 hover:border-b-4 hover:border-yellow_1 bg-blue_1 dark:bg_blue_2 text-center rounded-lg cursor-pointer size-btn" view-name="okandogs" view-size="computer">
+            <i class="fa-solid fa-computer text-xl"></i>
+            <p class="text-xs">Computer</p>
+        </div>
+        <div class="p-3 hover:bg-blue_2 duration-300 hover:border-b-4 hover:border-yellow_1 bg-blue_1 dark:bg_blue_2 text-center rounded-lg cursor-pointer size-btn" view-name="okandogs" view-size="laptop">
+            <i class="fa-solid fa-laptop text-xl"></i>
+            <p class="text-xs">Laptop</p>
+        </div>
+        <div class="p-3 hover:bg-blue_2 duration-300 hover:border-b-4 hover:border-yellow_1 bg-blue_1 dark:bg_blue_2 text-center rounded-lg cursor-pointer size-btn" view-name="okandogs" view-size="tablet">
+            <i class="fa-solid fa-tablet text-xl"></i>
+            <p class="text-xs">Tablet</p>
+        </div>
+        <div class="p-3 hover:bg-blue_2 duration-300 hover:border-b-4 hover:border-yellow_1 bg-blue_1 dark:bg_blue_2 text-center rounded-lg cursor-pointer size-btn" view-name="okandogs" view-size="phone">
+            <i class="fa-solid fa-mobile text-xl"></i>
+            <p class="text-xs">Phone</p>
+        </div>
+    </div>
+    <div class=" p-7 border-2 border-b-4 border-dark_1 dark:border-yellow_1 rounded-lg mx-3 bg-dark_1 duration-300 h-full min-h-[40em] w-5/6 " id="okandogs">
+        <div class="bg-white rounded-lg p-1 h-ful min-h-[40em]">
+            <iframe src="https://tylerthibault.github.io/okandogs/" class="min-h-[40em] h-full w-full"></iframe>
+        </div>
+    </div>
+</div>
+<div class="md:col-span-4 bg-blue_1 dark:blue_2 dark:text-light_1 rounded-lg m-7 p-3">
+    <div class="flex justify-between items-center">
+        <h2 class="text-2xl">Baked Blessings</h2>
+        <p class="view-site-btn cursor-pointer btn bg-yellow_1 text-dark_1" site-name="bakedblessings_site">View Site</p>
+    </div>
+    <div class="flex flex-col gap-3 text-black">
+        <p>
+            As the creator of the website, I am proud to have built a platform for my wife's passion for baking. Using my knowledge of Python with Flask and a MySQL database, I have created a website that showcases her love for using Sourdough starter as the key ingredient in her homemade baked goods. With her busy schedule as a full-time wife and homeschool mom, she understands the need for homemade baked goods and the joy they bring to families. Through her little side hustle, she is able to provide her community with homemade baked goods that are both delicious and healthy. The use of Sourdough starter allows her to bake with wheat flour, while still providing gluten-intolerant individuals with baked goods they can enjoy without worry. It brings me joy to see her passion and talent come to life on this website, and I am excited to see where this little side hustle takes her in the future.
+        </p>
+    </div>
+</div>
+<div class="hidden flex flex-col items-center justify-center col-span-7" id="bakedblessings_site">
+    <div class="flex justify-center gap-3 h-full w-full my-3">
+        <div class="p-3 hover:bg-blue_2 duration-300 hover:border-b-4 hover:border-yellow_1 bg-blue_1 dark:bg_blue_2 text-center rounded-lg cursor-pointer size-btn" view-name="bakedblessings" view-size="computer">
+            <i class="fa-solid fa-computer text-xl"></i>
+            <p class="text-xs">Computer</p>
+        </div>
+        <div class="p-3 hover:bg-blue_2 duration-300 hover:border-b-4 hover:border-yellow_1 bg-blue_1 dark:bg_blue_2 text-center rounded-lg cursor-pointer size-btn" view-name="bakedblessings" view-size="laptop">
+            <i class="fa-solid fa-laptop text-xl"></i>
+            <p class="text-xs">Laptop</p>
+        </div>
+        <div class="p-3 hover:bg-blue_2 duration-300 hover:border-b-4 hover:border-yellow_1 bg-blue_1 dark:bg_blue_2 text-center rounded-lg cursor-pointer size-btn" view-name="bakedblessings" view-size="tablet">
+            <i class="fa-solid fa-tablet text-xl"></i>
+            <p class="text-xs">Tablet</p>
+        </div>
+        <div class="p-3 hover:bg-blue_2 duration-300 hover:border-b-4 hover:border-yellow_1 bg-blue_1 dark:bg_blue_2 text-center rounded-lg cursor-pointer size-btn" view-name="bakedblessings" view-size="phone">
+            <i class="fa-solid fa-mobile text-xl"></i>
+            <p class="text-xs">Phone</p>
+        </div>
+    </div>
+    <div class=" p-7 border-2 border-b-4 border-dark_1 dark:border-yellow_1 rounded-lg mx-3 bg-dark_1 duration-300 h-full min-h-[40em] w-5/6 " id="bakedblessings">
+        <div class="bg-white rounded-lg p-1 h-ful min-h-[40em]">
+            <iframe src="https://bakedblessings.herokuapp.com/" class="min-h-[40em] h-full w-full"></iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/static/js/projects.js"></script>
+</div>
+
+    </div>
+
+    <div>
+        <div class="flex flex-col gap-1 items-center justify-center text-center bg-blue_2 dark:bg-yellow_1 text-yellow_1 dark:text-dark_1 dark:bg-dark_2 py-3">
+    <p class="text-xl uppercase">Tyler Thibault</p>
+    <p>Web Developer</p>
+    <p><a href="emailto:tyler.thibault@pm.com">tyler.thibault@pm.com</a></p>
+    <div class="flex gap-3">
+        <p><a class="btn bg-blue_1 text-dark_1" href="">Github</a></p>
+        <p><a class="btn bg-blue_1 text-dark_1" href="">linkedIn</a></p>
+    </div>
+</div>
+    </div>
+
+    
+        
+    
+    <script src="https://kit.fontawesome.com/4963ddc73f.js" crossorigin="anonymous"></script>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/dark_mode.js"></script>
+    
+</body>
+</html>
